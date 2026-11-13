@@ -1,8 +1,9 @@
-package br.com.alunoonline.api.Controller;
+package br.com.alunoonline.api.controller;
 
 import java.util.List;
 import java.util.Optional;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,6 +21,7 @@ import br.com.alunoonline.api.service.DisciplinaService;
 
 @RestController
 @RequestMapping("/disciplinas")
+@SecurityRequirement(name = "bearer-key")
 public class DisciplinaController {
 
     @Autowired

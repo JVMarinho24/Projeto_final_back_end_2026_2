@@ -1,4 +1,4 @@
-package br.com.alunoonline.api.Controller;
+package br.com.alunoonline.api.controller;
 
 import br.com.alunoonline.api.dtos.DadosAutenticacao;
 import br.com.alunoonline.api.infra.security.DadosTokenJWT;

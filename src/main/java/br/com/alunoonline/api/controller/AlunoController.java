@@ -1,8 +1,9 @@
-package br.com.alunoonline.api.Controller;
+package br.com.alunoonline.api.controller;
 
 
 import br.com.alunoonline.api.model.Aluno;
 import br.com.alunoonline.api.service.AlunoService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import java.util.Optional;
 
 @RestController // porta de entrada do front (vai receber as request e entregar as responses).
 @RequestMapping("/alunos") //quando acessar /alunos ele vai usar o AlunoController
+@SecurityRequirement(name = "bearer-key")
 public class AlunoController {
 
     @Autowired // serve para injetar as coisas

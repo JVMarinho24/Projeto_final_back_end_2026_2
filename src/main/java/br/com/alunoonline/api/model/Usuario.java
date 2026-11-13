@@ -18,6 +18,11 @@ import java.util.List;
 @EqualsAndHashCode(of = "id")
 public class Usuario implements UserDetails {
 
+    public Usuario(String login, String senha) {
+        this.login = login;
+        this.senha = senha;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
